@@ -5,7 +5,9 @@
     <title>Title</title>
 </head>
 <body>
-
+    <div id="app">
+        {{now}}
+    </div>
     <script src="https://unpkg.com/vue@2.6.1/dist/vue.min.js"></script>
     <script>
         /*
@@ -16,6 +18,14 @@
         *       当一个计算属性所依赖的数据发生变化时，它才会重新取值，所以只要text不改变，计算属性也就不更新
         *
         * */
+        var app = new Vue({
+            el: '#app',
+            computed: {
+                now: function () {
+                    return new Date();
+                }
+            }
+        });
     </script>
 </body>
 </html>
