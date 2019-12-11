@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="demo">
+        <span v-if="test">显示这段文本</span>
+    </div>
+<script src="https://unpkg.com/vue@2.6.1/dist/vue.min.js"></script>
+<script>
+    var demo = new Vue({
+        el: '#demo',
+        data: {
+            test: true
+        }
+    });
+</script>
+</body>
+</html>

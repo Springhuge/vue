@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="demo3">
+        <span v-html="link"></span>
+    </div>
+
+<script src="https://unpkg.com/vue@2.6.1/dist/vue.min.js"></script>
+<script>
+    var deme3 = new Vue({
+        el: '#demo3',
+        data: {
+            link: '<a href="#">this is a link</a>'
+        }
+    });
+</script>
+</body>
+</html>

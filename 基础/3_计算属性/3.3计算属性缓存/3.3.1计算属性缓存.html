@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        {{reversedText()}}
+    </div>
+<script src="https://unpkg.com/vue@2.6.1/dist/vue.min.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            text: '123155523,123123'
+        },
+        methods:{
+            reversedText: function () {
+                //这里的this指向的是当前Vue实例
+                return this.text.split(',').reverse().join(',');
+            }
+        }
+    });
+</script>
+</body>
+</html>

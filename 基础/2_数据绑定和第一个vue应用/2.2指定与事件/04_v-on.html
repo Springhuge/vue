@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="demo">
+        <span v-if="show">显示</span>
+        <button @click="handler">点击</button>
+    </div>
+<script src="https://unpkg.com/vue@2.6.1/dist/vue.min.js"></script>
+<script>
+    var demo = new Vue({
+        el: '#demo',
+        data: {
+            show: true
+        },
+        methods: {
+            handler: function () {
+                if(this.show){
+                    this.close();
+                }else{
+                    this.open();
+                }
+            },
+            open: function () {
+                this.show = true;
+            },
+            close: function () {
+                this.show = false;
+            }
+        }
+    });
+</script>
+</body>
+</html>

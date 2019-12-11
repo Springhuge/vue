@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>test1</title>
+  </head>
+  <body>
+    <div id="demo">
+      <ul>
+        <li v-for="book in books">{{book.name}}</li>
+      </ul>
+    </div>
+    <script src="https://unpkg.com/vue@2.6.1/dist/vue.min.js"></script>
+    <script type="text/javascript">
+      new Vue({
+          el: '#demo',
+          data: {
+              books: [
+                  {name : '《Vue.js实战》'},
+                  {name : '《JavaScript语言精粹》'},
+                  {name : 'JavaScript高级程序设计》'}
+                 ]
+          }
+
+      })
+
+    </script>
+  </body>
+</html>

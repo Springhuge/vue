@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div id="demo1">
+        总价: {{price}}
+    </div>
+<script src="https://unpkg.com/vue@2.6.1/dist/vue.min.js"></script>
+<script>
+    var demo1 = new Vue({
+        el: '#demo1',
+        data: {
+            package1: [{
+                name: 'Iphone 7',
+                price: 7199,
+                count: 2
+            }],
+            package2: [
+                    {
+                    name: 'apple',
+                    price: 3,
+                    count: 5
+                },
+                {
+                    name: 'banana',
+                    price: 2,
+                    count: 10
+                }
+            ]
+        },
+        computed: {
+            price: function () {
+                var price = 0;
+                for(var i =0 ; i < this.package1.length; i++){
+                    price += this.package1[i].price * this.package1[i].count;
+                }
+                for(var i = 0; i < this.package2.length; i++){
+                    price += this.package2[i].price * this.package2[i].count;
+                }
+                return price;
+            }
+        }
+    });
+</script>
+</body>
+</html>

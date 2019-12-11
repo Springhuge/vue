@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="demo">
+        <p v-if="show">这是一段文本</p>
+        <button>点击隐藏</button>
+    </div>
+<script src="https://unpkg.com/vue@2.6.1/dist/vue.min.js"></script>
+<script>
+    var demo = new Vue({
+        el: '#demo',
+        data: {
+            show: true
+        },
+        methods: {
+            init: function (text) {
+                console.log(text);
+            }
+        },
+        mounted: function () {
+            this.init('在初始化时调用');//在初始化时调用
+        }
+    });
+    demo.init('通过外部调用');
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="demo">
+
+    </div>
+<script src="https://unpkg.com/vue@2.6.1/dist/vue.min.js"></script>
+<script>
+    /*
+    * Vue生命周期
+    *
+    * created 实例创建完成后调用，此阶段完成了数据的观测等，但尚未挂载，$el还不可用，
+    *           需要初始化处理一些树时会比较有用
+    *
+    * mounted el挂载到实例上后调用，一般我们的一个业务逻辑会在这里开始
+    *
+    * beforeDestory 实例销毁后调用，主要解绑一些使用addEventListener监听的时间等
+    *
+    *
+    * */
+   var demo = new Vue({
+       el: '#demo',
+       data: {
+           a: 2
+       },
+       created: function () {
+           console.log(this.a);
+       },
+       mounted: function () {
+           console.log(this.a);
+       }
+
+   });
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="demo">
+        <input type="text" v-model="name" placeholder="你的名字"/>
+        <h1>你好，{{name}}</h1>
+    </div>
+<script src="https://unpkg.com/vue@2.6.1/dist/vue.min.js"></script>
+<script>
+    var myData = {
+        name: "zzz"
+    }
+    var demo = new Vue({
+        el: document.getElementById("demo"),
+        data: myData
+    })
+    //可以直接通过实例名调用相应的参数
+    console.log(demo.name);
+
+    /*demo.name = "傻子";*/
+    myData.name = "傻子";
+    console.log(myData.name);
+    console.log(demo.name);
+
+</script>
+</body>
+</html>
