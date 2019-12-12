@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        <div :class="[activeCls, errorCls]"></div>
+    </div>
+    <script src="https://unpkg.com/vue@2.6.1/dist/vue.min.js"></script>
+    <script>
+        /*
+        *利用数组创建class对象
+        *
+        * */
+        var app = new Vue({
+            el: '#app',
+            data: {
+                activeCls: 'active',
+                errorCls: 'error'
+            }
+        });
+    </script>
+</body>
+</html>

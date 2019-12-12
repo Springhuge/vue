@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        <span v-once>{{message}}</span>
+        <div v-once>
+            <span>{{message}}</span>
+        </div>
+    </div>
+    <script src="https://unpkg.com/vue@2.6.1/dist/vue.min.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: '这是一段文本'
+            }
+        });
+        app.message = 'this is a text';
+    </script>
+</body>
+</html>

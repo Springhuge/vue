@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        <p v-if="status === 1">当status为1时显示</p>
+        <p v-else-if="status === 2">当status为2时显示</p>
+        <p v-else>否则显示这行</p>
+    </div>
+    <script src="https://unpkg.com/vue@2.6.1/dist/vue.min.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                status: 3
+            }
+        });
+    </script>
+</body>
+</html>

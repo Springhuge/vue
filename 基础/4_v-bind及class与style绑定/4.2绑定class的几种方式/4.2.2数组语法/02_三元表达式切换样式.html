@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        <div :class="[isActive ? activeCls : '',errorCls]"></div>
+    </div>
+    <script src="https://unpkg.com/vue@2.6.1/dist/vue.min.js"></script>
+    <script>
+        /**
+         * 使用三元运算符动态切换class
+         * @type {Vue}
+         */
+        var app = new Vue({
+            el: '#app',
+            data: {
+                isActive: true,
+                activeCls: 'active',
+                errorCls: 'error'
+            }
+        });
+
+    </script>
+</body>
+</html>
