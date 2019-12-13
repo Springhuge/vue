@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="(book,index) in books">{{index}} - {{book.author}} - {{book.name}}</li>
+        </ul>
+    </div>
+    <script src="https://unpkg.com/vue@2.6.1/dist/vue.min.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                books: [
+                    {
+                        name: 'Spring',
+                        author: 'zszz'
+                    },
+                    {
+                        name: 'SpringMvc',
+                        author: 'asdadasda'
+                    }
+                ]
+            }
+        });
+        app.books.push(
+            {
+            name: 'Mybatis',
+            author: 'asdadsadasasda'
+            },
+            {
+                name: 'Hibernate',
+                author: 'asdadsadadsadasasda'
+            }
+        );
+    </script>
+</body>
+</html>

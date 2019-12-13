@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="(value,key,index) in user">
+                {{index}} - {{key}} - {{value}}
+            </li>
+        </ul>
+    </div>
+    <script src="https://unpkg.com/vue@2.6.1/dist/vue.min.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                user: {
+                    name: "涂山苏苏",
+                    gender: '女',
+                    age: 26
+                }
+            }
+        });
+    </script>
+</body>
+</html>

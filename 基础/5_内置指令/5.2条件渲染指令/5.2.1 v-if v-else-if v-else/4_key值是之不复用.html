@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        <template v-if="type === 'name'">
+            <label>用户名:</label>
+            <input placeholder="请输入用户名" key="name-input">
+        </template>
+        <template v-else>
+            <label>密码:</label>
+            <input placeholder="请输入密码" key="mail-input">
+        </template>
+        <button @click="handleToggleClick">切换输入类型</button>
+    </div>
+    <script src="https://unpkg.com/vue@2.6.1/dist/vue.min.js"></script>
+    <script>
+        /**
+         * 使用key值不让元素被复用
+         * 切换类型的时候元素被删除了
+         * @type {Vue}
+         */
+        var app = new Vue({
+            el: '#app',
+            data: {
+                type: 'name'
+            },
+            methods: {
+                handleToggleClick: function () {
+                    this.type = this.type === 'name' ? 'mail' : 'name';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
