@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        点击次数:{{ counter }}
+        <button @click="handlerAdd()">+1</button>
+        <button @click="handlerAdd(10)">+10</button>
+    </div>
+    <script src="https://unpkg.com/vue@2.6.1/dist/vue.min.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                counter: 0
+            },
+            methods: {
+                handlerAdd: function (count) {
+                    count = count || 1;
+                    //this指向当前的Vue实例
+                    this.counter += count;
+                }
+            }
+
+        });
+    </script>
+</body>
+</html>
