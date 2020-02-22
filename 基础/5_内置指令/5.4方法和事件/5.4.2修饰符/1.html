@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--阻止单击事件冒泡-->
+    <a @click.stop="handle">这是一个a标签</a>
+    <!--提交事件不在重载页面-->
+    <from @submit.prevent="handle"></from>
+    <!--修饰符可以串联-->
+    <a @click.stop.prevent="handle"></a>
+    <!--只有修饰符-->
+    <from @submit.prevent></from>
+    <!--添加事件侦听器时使用时间捕获谋生-->
+    <div @click.caoture="handle">...</div>
+    <script src="https://unpkg.com/vue@2.6.1/dist/vue.min.js"></script>
+</body>
+</html>
